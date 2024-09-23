@@ -15,12 +15,14 @@ const Profile = () => {
     const [name, setName] = useState('John Doe');
     const [age, setAge] = useState(0);
     const names = ['Franco', 'Gian', 'Franco Gian', 'Franco Gian de Castro'];
+    const itemName = window.localStorage.getItem('itemName');
 
     return (
         <div>
             <h1>Profile Information</h1>
             <p>Name: {name}</p>
             <p>Age: {age}</p>
+            <p>Item Name: {itemName}</p>
             <button className='btn btn-primary' onClick={() => increaseAge(setAge, age)}>Increase Age</button>
             <br /><br />
             <button className='btn btn-primary' onClick={() => changeName(setName, names)}>Change Name</button>
