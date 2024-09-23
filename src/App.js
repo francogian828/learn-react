@@ -1,41 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
 import Profile from './Components/Profile';
-import Event from './Components/Event';
-import UserStatus from './Components/UserStatus';
-
-function DisplayInfo(props) {
-  return (
-    <div>
-      <h2>{props.title}</h2>
-      <p>{props.description}</p>
-    </div>
-  );
-}
+import Timer from './Components/Timer';
 
 function App() {
-  const title = 'React Props Example';
-  const description = 'Props are used to pass data from one component to another.';
-
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <h1>Use State</h1>
+        <h1>Introduction to Hooks</h1>
+        <h2>Use State</h2>
         <Profile></Profile>
 
         <br />
-        <h1>React Props</h1>
-        <DisplayInfo title={title} description={description} />
-
-        <br />
-        <h1>Events</h1>
-        <Event></Event>
-
-        <br />
-        <h1>Conditional Rendering</h1>
-        <UserStatus></UserStatus>
-        <br />
+        <h2>Use Effect</h2>
+        <Timer />
       </header>
     </div>
   );
